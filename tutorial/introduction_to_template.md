@@ -5,7 +5,7 @@
 বিষয়টা হাতে কলমে করে দেখা যাক, ইন্ডেক্স ভিউটিকে আপডেট করে স্ট্রিং এর মধ্যে একটা এইচটিএমএল ট্যাগ বসিয়ে দিন এভাবেঃ
 
     def index(request):
-        return HttpResponse(“<h1>Hello World!”</h1>”)
+        return HttpResponse(“<h1>Hello World!</h1>”)
 
 আমরা হ্যালো ওয়ার্ল্ড লেখাটিকে এইচটিএমএল এর H1 ট্যাগ এর ভিতরে রাখলাম, খেয়াল করুন, ট্যাগসহ পুরো লাইনটাই কিন্তু স্ট্রিং হিসেবে আছে!
 
@@ -19,15 +19,15 @@
 আমাদের ইনডেক্স ভিউ ফাংশনটিতেই যদি আমরা সম্পুর্ন এইচটিএমএল কোড যুক্ত করি তাহলে সেটা এরকম হবেঃ
 
     def index(request):
-        response_string = “””<!DOCTYPE html>
+        response_string = “““<!DOCTYPE html>
         <html>
         <head>
         <title>My view</title>
-        <head>
+        </head>
         <body>
         <h1>Hello World!</h1>
         </body>
-        <html>”””
+        </html>”””
         
         return HttpResponse(response_string)
 
@@ -43,11 +43,11 @@
     <html>
         <head>
             <title>My view</title>
-        <head>
+        </head>
         <body>
             <h1>Hello World!</h1>
         </body>
-    <html>
+    </html>
 
 
 এখন ভিউ ফাংশনটিকে এডিট করে এরকম করুনঃ
